@@ -15,7 +15,6 @@ function Home() {
             <div className = "whole-information">
                 {information.map()}
             </div>
-
         </div>
     )
 }
