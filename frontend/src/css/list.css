@@ -1,0 +1,49 @@
+.list-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.finance-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px 25px;
+  padding: 10px 5px;
+}
+
+.finance-info > div {
+  background: #f9f9f9;
+  padding: 15px 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.finance-info h3 {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #555;
+}
+
+.finance-info p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #111;
+  word-break: break-word;
+}
+
+/* Optional: Different colors for money values */
+.income p, .balance p, .monthly-savings p, .savings-goal p {
+  color: #2e7d32; /* green */
+}
+
+.expenses p {
+  color: #c62828; /* red */
+}

@@ -1,3 +1,4 @@
+import '../css/dashboard.css';
 
 function Dashboard({ information }) {
 
@@ -7,7 +8,7 @@ function Dashboard({ information }) {
     return (
         <div className="dashboard-container">
             <div className="dashboard-overlay">
-                <button className="Add" onClick={onAdd}>♡︎</button>
+                <button className="Add" onClick={onAdd}>+</button>
             </div>
 
             <div className="finance-info">

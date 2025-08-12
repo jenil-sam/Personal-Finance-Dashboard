@@ -1,0 +1,70 @@
+.dashboard-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  position: relative;
+}
+
+.dashboard-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+button.Add {
+  background-color: #ff4081;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 64, 129, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+button.Add:hover {
+  background-color: #e91e63;
+}
+
+.finance-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* spacing between cards */
+  margin-top: 60px; /* to clear the button at top */
+}
+
+.income-card, .expenses-card, .balance-card {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  border-left: 6px solid;
+}
+
+.income-card {
+  border-color: #4caf50; /* green */
+}
+
+.expenses-card {
+  border-color: #f44336; /* red */
+}
+
+.balance-card {
+  border-color: #2196f3; /* blue */
+}
+
+.income-card h3, .expenses-card h3, .balance-card h3 {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.income-card p, .expenses-card p, .balance-card p {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+}

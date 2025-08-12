@@ -1,3 +1,4 @@
+import '../css/list.css';
 function List({ information }) {
     return (
         <div className="list-container">

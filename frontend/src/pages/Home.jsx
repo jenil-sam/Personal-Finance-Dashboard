@@ -1,3 +1,4 @@
+import '../css/home.css';
 import Dashboard from "../components/Dashboard"
 import List from "../components/List";
 import { useState } from "react";

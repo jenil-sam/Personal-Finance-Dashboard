@@ -1,0 +1,24 @@
+/* Reset some default margins/paddings */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #222;
+}
+
+/* Container for main content area */
+.main-content {
+  max-width: 900px;
+  margin: 80px auto 40px; /* leave space for navbar */
+  padding: 0 20px;
+  min-height: calc(100vh - 120px);
+  box-sizing: border-box;
+}
+
+/* Optional: smooth font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

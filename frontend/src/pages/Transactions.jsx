@@ -1,3 +1,5 @@
+import '../css/transactions.css';
+
 function Transactions(){
     return (
         <div className ="entire-transactions">
