@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
 });
 
 //get a single record
-router.get("/", async (req, res) => {
+router.get("/:id", async (req, res) => {
     let collection = await db.collection("transactions");
     let query = { _id: new ObjectId(req.params.id) };
     let results = await collection.findOne(query);
@@ -62,7 +62,7 @@ router.patch("/:id", async (req, res) => {
 })
 
 //delete a record
-router.patch("/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
     try {
         const query = { _id: new ObjectId(req.params.id) };
         const collection = await db.collection("transactions");
