@@ -1,9 +1,10 @@
 import '../css/dashboard.css';
+import { useNavigate } from "react-router-dom";
 
 function Dashboard({ information }) {
-
+    const navigate = useNavigate();
     function onAdd() {
-        alert("clicked")
+        navigate("/transactionsNew");
     }
     return (
         <div className="dashboard-container">

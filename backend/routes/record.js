@@ -25,13 +25,16 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
     try {
         let newDocument = {
-            name: req.body.name,
-            position: req.body.position,
-            level: req.body.level
+            type: req.body.type,
+            amount: req.body.amount,
+            category: req.body.category,
+            description: req.body.description,
+            date: req.body.date ? new Date(req.body.date) : new Date().toISOString(),
+            createdAt: new Date()
         }
         let collection = await db.collection("transactions");
         let result = await collection.insertOne(newDocument);
-        res.send(result).status(200);
+        res.status(200).send(result);
     }
     catch (err) {
         console.error(err);
@@ -45,15 +48,17 @@ router.patch("/:id", async (req, res) => {
         const query = { _id: new ObjectId(req.params.id) };
         const updates = {
             $set: {
-                name: req.body.name,
-                position: req.body.position,
-                level: req.body.level,
+                type: req.body.type,
+                amount: req.body.amount,
+                category: req.body.category,
+                description: req.body.description,
+                date: req.body.date ? new Date(req.body.date) : undefined
             }
         }
 
         let collection = await db.collection("transactions");
         let result = await collection.updateOne(query, updates);
-        res.send(results).status(200);
+        res.send(result).status(200);
     }
     catch (err) {
         console.error(err);
@@ -68,7 +73,7 @@ router.delete("/:id", async (req, res) => {
         const collection = await db.collection("transactions");
 
         let result = await collection.deleteOne(query);
-        res.send(results).status(200);
+        res.send(result).status(200);
     }
     catch (err) {
         console.error(err);

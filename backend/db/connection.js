@@ -18,7 +18,7 @@ try {
     await client.db("admin").command({ ping: 1 })
 
     console.log(
-        "Pinged your depolyment. You successfully connected to MongoDB"
+        "Successfully connected to MongoDB"
     );
 }
 
