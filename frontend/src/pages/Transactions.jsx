@@ -12,7 +12,7 @@ const TransactionRow = ({ transaction, deleteTransaction }) => (
 
         <td>
             <div className="action-buttons">
-                <Link to={`/edit/${transaction._id}`} className="edit-button">
+                <Link to={`/transactions/edit/${transaction._id}`} className="edit-button">
                     Edit
                 </Link>
                 <button onClick={() => deleteTransaction(transaction._id)} className="delete-button">
